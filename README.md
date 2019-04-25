@@ -14,8 +14,7 @@ Requisitos para funcionamento:
 
 1) Ter o Eclipse com Maven para isso somente importar como Projeto Maven;
 
-2) Ter um banco MySQL local ou remoto, configurar no diretório src/main/resources/application.properties os dados para aceso 
-   ao banco.
+2) Ter um banco MySQL local ou remoto, configurar no diretório src/main/resources/application.properties os dados para acesso ao banco. Dica: Use o wampserver não precisa configurar banco só acessar via phpmyadmin, baixar no endereço: http://www.wampserver.com/en/
 
 
 Para ver os Web Services instalei o SwaggerUI para interagir com a API. Para acessar e testar a API no endereço local: http://localhost:8080/swagger-ui.html
