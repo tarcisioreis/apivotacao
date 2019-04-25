@@ -18,8 +18,7 @@ Requisitos para funcionamento:
    ao banco.
 
 
-Para ver os Web Services instalei o SwaggerUI para interagir com a API.
-
+Para ver os Web Services instalei o SwaggerUI para interagir com a API. Para acessar e testar a API no endereço local: http://localhost:8080/swagger-ui.html
 
 
 Contato: Tarcisio Machado dos Reis - e-mail: tarcisio.reis.ti@gmail.com ou whatsapp 051 9 8490-4355.
