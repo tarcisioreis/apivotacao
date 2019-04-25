@@ -19,5 +19,8 @@ Requisitos para funcionamento:
 
 Para ver os Web Services instalei o SwaggerUI para interagir com a API. Para acessar e testar a API no endereço local: http://localhost:8080/swagger-ui.html
 
+Incluido no diretório Documentacao o XML usado para testar a API no SOApUI, 
+baixar no endereço https://smartbear.com/ ou https://www.soapui.org/
+
 
 Contato: Tarcisio Machado dos Reis - e-mail: tarcisio.reis.ti@gmail.com ou whatsapp 051 9 8490-4355.
