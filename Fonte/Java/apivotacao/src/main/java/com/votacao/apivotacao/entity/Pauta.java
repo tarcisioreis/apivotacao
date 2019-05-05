@@ -1,6 +1,7 @@
 package com.votacao.apivotacao.entity;
 
 import java.io.Serializable;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,14 +12,10 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import java.util.Set;
-
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "pauta")
-@NoArgsConstructor 
 @Getter
 public class Pauta implements Serializable {
 

@@ -16,11 +16,9 @@ import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "votacao_pauta")
-@NoArgsConstructor 
 @Getter
 public class VotacaoPauta implements Serializable {
 

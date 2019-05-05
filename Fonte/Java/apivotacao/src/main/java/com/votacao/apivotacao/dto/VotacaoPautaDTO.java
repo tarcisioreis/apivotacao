@@ -7,12 +7,9 @@ import javax.persistence.Id;
 
 import com.votacao.apivotacao.entity.VotacaoPauta;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Entity
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
 public class VotacaoPautaDTO implements Serializable {
 
