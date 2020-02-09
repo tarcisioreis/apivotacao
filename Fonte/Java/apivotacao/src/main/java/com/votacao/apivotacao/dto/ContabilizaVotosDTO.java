@@ -5,13 +5,12 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.*;
 
 @Entity
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
+@Setter
+@NoArgsConstructor
 public class ContabilizaVotosDTO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -21,27 +20,6 @@ public class ContabilizaVotosDTO implements Serializable {
 	private int sim;
 	private int nao;
 
-	public String getDescricao() {
-		return descricao;
-	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-	
-	public int getSim() {
-		return sim;
-	}
-	public void setSim(int sim) {
-		this.sim = sim;
-	}
-	
-	public int getNao() {
-		return nao;
-	}
-	public void setNao(int nao) {
-		this.nao = nao;
-	}
-	
     /**
      * Generic put method to map JPA native Query to this object.
      *
