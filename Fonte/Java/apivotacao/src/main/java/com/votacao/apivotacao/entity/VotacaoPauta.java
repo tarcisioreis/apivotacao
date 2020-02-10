@@ -12,14 +12,15 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.*;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
-
-import lombok.Getter;
 
 @Entity
 @Table(name = "votacao_pauta")
 @Getter
+@Setter
+@NoArgsConstructor
 public class VotacaoPauta implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -40,43 +41,10 @@ public class VotacaoPauta implements Serializable {
 	private Long idAssociado;
 	private int voto;
 
-	public VotacaoPauta() {
-		super();
-	}
-	
 	public VotacaoPauta(Long id, Long idPauta, Long idAssociado, int voto) {
 		this.id = id;
 		this.idPauta = idPauta;
 		this.idAssociado = idAssociado;
 		this.voto = voto;
 	}
-
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getIdPauta() {
-		return idPauta;
-	}
-	public void setIdPauta(Long idPauta) {
-		this.idPauta = idPauta;
-	}
-
-	public Long getIdAssociado() {
-		return idAssociado;
-	}
-	public void setIdAssociado(Long idAssociado) {
-		this.idAssociado = idAssociado;
-	}
-
-	public int getVoto() {
-		return voto;
-	}
-	public void setVoto(int voto) {
-		this.voto = voto;
-	}
-
 }

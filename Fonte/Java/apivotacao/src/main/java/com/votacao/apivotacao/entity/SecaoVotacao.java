@@ -14,6 +14,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
@@ -22,6 +24,8 @@ import lombok.Getter;
 @Entity
 @Table(name = "secao_votacao")
 @Getter
+@Setter
+@NoArgsConstructor
 public class SecaoVotacao implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -45,10 +49,6 @@ public class SecaoVotacao implements Serializable {
 	@Fetch(FetchMode.JOIN)
 	private Pauta pauta;
 
-	public SecaoVotacao() {
-		super();
-	}
-
 	public SecaoVotacao(Long id, String dataAbertura, String dataFechamento, Long idPauta) {
 		this.id = id;
 		this.dataAbertura = LocalDateTime.parse(dataAbertura, formatter);
@@ -59,33 +59,5 @@ public class SecaoVotacao implements Serializable {
 		
 		this.idPauta = idPauta;
 	}
-	
-	public Long getId() {
-		return id;
-	}
-	public void seId(Long id) {
-		this.id = id;
-	}
 
-	public LocalDateTime getDataAbertura() {
-		return dataAbertura;
-	}
-	public void setDataAbertura(LocalDateTime dataAbertura) {
-		this.dataAbertura = dataAbertura;
-	}
-
-	public LocalDateTime getDataFechamento() {
-		return dataFechamento;
-	}
-	public void setDataFechamento(LocalDateTime dataFechamento) {
-		this.dataFechamento = dataFechamento;
-	}
-
-	public Long getIdPauta() {
-		return idPauta;
-	}
-	public void setIdPauta(Long idPauta) {
-		this.idPauta = idPauta;
-	}
-	
 }

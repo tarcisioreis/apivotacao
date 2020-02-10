@@ -5,13 +5,12 @@ import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.*;
 
 @Entity
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
+@Setter
+@NoArgsConstructor
 public class VotoPorSecaoDTO implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -20,27 +19,6 @@ public class VotoPorSecaoDTO implements Serializable {
 	private Long idSecao;
 	private Long idAssociado;
 	private int voto;
-	
-	public Long getIdSecao() {
-		return idSecao;
-	}
-	public void setIdSecao(Long idSecao) {
-		this.idSecao = idSecao;
-	}
-	
-	public Long getIdAssociado() {
-		return idAssociado;
-	}
-	public void setIdAssociado(Long idAssociado) {
-		this.idAssociado = idAssociado;
-	}
-	
-	public int getVoto() {
-		return voto;
-	}
-	public void setVoto(int voto) {
-		this.voto = voto;
-	}
 	
     /**
      * Generic put method to map JPA native Query to this object.

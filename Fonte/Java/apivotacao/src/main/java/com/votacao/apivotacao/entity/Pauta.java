@@ -12,11 +12,13 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-import lombok.Getter;
+import lombok.*;
 
 @Entity
 @Table(name = "pauta")
 @Getter
+@Setter
+@NoArgsConstructor
 public class Pauta implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -31,27 +33,9 @@ public class Pauta implements Serializable {
 	@OneToMany(targetEntity = VotacaoPauta.class, mappedBy = "id", orphanRemoval = false, fetch = FetchType.LAZY)
 	private Set<VotacaoPauta> votacaoPautas;
 
-	public Pauta() {
-		super();
-	}
-	
 	public Pauta(Long id, String descricao) {
 		this.id = id;
 		this.descricao = descricao;
 	}
 
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
-	}
-	
 }

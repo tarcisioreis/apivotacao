@@ -3,6 +3,7 @@ package com.votacao.apivotacao.dto;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Optional;
 
@@ -11,13 +12,12 @@ import javax.persistence.Id;
 
 import com.votacao.apivotacao.entity.SecaoVotacao;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.*;
 
 @Entity
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
+@Setter
+@NoArgsConstructor
 public class SecaoVotacaoDTO implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -30,46 +30,14 @@ public class SecaoVotacaoDTO implements Serializable {
 	private LocalDateTime dataFechamento;
 	private Long idPauta;
 	
-	public SecaoVotacaoDTO() {
-		super();
-	}
-	
 	public SecaoVotacaoDTO(Long id, String dataAbertura, String dataFechamento, Long idPauta) {
 		this.id = id;
 		this.dataAbertura = LocalDateTime.parse(dataAbertura, formatter);
-		
+
 		if (dataFechamento != null) {
 			this.dataFechamento = LocalDateTime.parse(dataFechamento, formatter);
 		}
-		
-		this.idPauta = idPauta;
-	}
-	
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
-	}
-	
-	public LocalDateTime getDataAbertura() {
-		return dataAbertura;
-	}
-	public void setDataAbertura(LocalDateTime dataAbertura) {
-		this.dataAbertura = dataAbertura;
-	}
-	
-	public LocalDateTime getDataFechamento() {
-		return dataFechamento;
-	}
-	public void setDataFechamento(LocalDateTime dataFechamento) {
-		this.dataFechamento = dataFechamento;
-	}
-	
-	public Long getIdPauta() {
-		return idPauta;
-	}
-	public void setIdPauta(Long idPauta) {
+
 		this.idPauta = idPauta;
 	}
 
@@ -94,7 +62,7 @@ public class SecaoVotacaoDTO implements Serializable {
 					                   secaoVotacao.get().getDataFechamento().format(formatter), 
 					                   secaoVotacao.get().getIdPauta());
 		} else {
-			return (SecaoVotacaoDTO) Collections.EMPTY_LIST;
+			return null;
 		}
 	}
 	
